@@ -10,11 +10,18 @@ namespace StackParentheses
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(isValidString("{}(((())))")); 
+            Console.WriteLine(isValidString("}((())))")); 
         }
         public static bool isValidString(string str)
         {
             Stack<char>stack = new Stack<char>();
+
+            if (str[0] != '(' && str[0] != '{' && str[0] != '[')
+            {
+                return false;
+
+            }
+            
             foreach (char c in str)
             {
                     if(c != ')' && c != '}' && c != ']')
