@@ -35,7 +35,7 @@ namespace StackParentheses
                     stack.Pop();
 
                 }
-
+                //
                      
             }
             return stack.Count == 0 ? true : false;
